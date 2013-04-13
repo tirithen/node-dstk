@@ -13,6 +13,11 @@ The [Data Science Toolkit](http://www.datasciencetoolkit.org) it self is a Linux
 
 This module provides an interface by making HTTP requests to the server, by default the public server at http://www.datasciencetoolkit.org is used but to improve speed you can clone this virtual machine and run it locally and set the dstk.apiURL to the cloned machines url ex. http://localhost:8080.
 
+## Installation
+Simply use the npm package manager
+
+	$ npm install dstk
+
 ## Usage example
 
 	var dstk = require('dstk');
@@ -20,13 +25,19 @@ This module provides an interface by making HTTP requests to the server, by defa
 	// OPTIONAL: change from default http://www.datasciencetoolkit.org server to custom server
 	// dstk.apiURL = 'http://localhost:8080';
 
-	dstk.info(function (error, data, httpResponse) {
+	// Find GPS coordinates for an IP number
+	dstk.ipToCoordinates('8.8.8.8', function (error, data, httpResponse) {
 		if (!error) {
 			console.log(data);
 		}
 	});
 
-	dstk.ipToCoordinates('8.8.8.8', function (error, data, httpResponse) {
+	// Find names in text
+	var dstk = require('dstk'),
+		text =	'This is a text naming Anna Andersson and Peter Nilsson ' +
+				'to try out the text to people functionality';
+
+	dstk.textToPeople(text, function (error, data, httpResponse) {
 		if (!error) {
 			console.log(data);
 		}
