@@ -26,6 +26,12 @@ This module provides an interface by making HTTP requests to the server, by defa
 		}
 	});
 
+	dstk.ipToCoordinates('8.8.8.8', function (error, data, httpResponse) {
+		if (!error) {
+			console.log(data);
+		}
+	});
+
 ## Available methods
 Below are the currently supported methods, they are linked to the [documentation on the Data Science Toolkit](http://www.datasciencetoolkit.org/developerdocs) for more detailed explanations.
 
