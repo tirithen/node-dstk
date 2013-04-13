@@ -1,0 +1,22 @@
+{
+    "name": "dstk",
+    "description": "An interface for the Data Science Toolkit distribution.",
+    "main": "./lib/dstk",
+    "author": "Fredrik Söderström",
+    "email": "tirithen@gmail.com",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tirithen/node-dstk"
+    },
+    "bugs": {
+        "url": "https://github.com/tirithen/node-dstk/issues"
+    },
+    "license": "GPL",
+    "dependencies": {
+        "request": ">=2.16.6"
+    },
+    "scripts": {
+        "test": "nodeunit test/test-dstk.js"
+    }
+}
